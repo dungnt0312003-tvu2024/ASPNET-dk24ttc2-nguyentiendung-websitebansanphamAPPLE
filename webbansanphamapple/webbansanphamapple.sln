@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36616.10 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webbansanphamapple", "webbansanphamapple\webbansanphamapple.csproj", "{C82860E3-78D2-43A9-B305-644C1D85C212}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C82860E3-78D2-43A9-B305-644C1D85C212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82860E3-78D2-43A9-B305-644C1D85C212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82860E3-78D2-43A9-B305-644C1D85C212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82860E3-78D2-43A9-B305-644C1D85C212}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF10591F-1816-4E9B-BAE0-285FCC826487}
+	EndGlobalSection
+EndGlobal
