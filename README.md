@@ -1,3 +1,7 @@
 # ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE
+Tên : Nguyễn Tiến Dũng
+SĐT : 0393809548
+Email : dungnt0312003@tvu-onschool.edu.vn
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ĐỒ ÁN CUỐI KHÓA : Tạo website bán các sản phẩm của Apple
 17-10-2025 : tạo sườn làm viêc, nghiên cứu, học về asp.dot chuẩn bị cho dự án
