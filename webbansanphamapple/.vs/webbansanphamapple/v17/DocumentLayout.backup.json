@@ -18,16 +18,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Default.aspx",
               "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\Default.aspx",
               "RelativeDocumentMoniker": "webbansanphamapple\\Default.aspx",
-              "ToolTip": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\Default.aspx*",
-              "RelativeToolTip": "webbansanphamapple\\Default.aspx*",
+              "ToolTip": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\Default.aspx",
+              "RelativeToolTip": "webbansanphamapple\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-10-23T03:10:40.387Z",
@@ -45,10 +49,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-10-23T03:10:18.21Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
