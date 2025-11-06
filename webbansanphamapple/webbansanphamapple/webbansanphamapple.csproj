@@ -80,6 +80,7 @@
     </Compile>
     <Compile Include="gDien.Master.cs">
       <DependentUpon>gDien.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="gDien.Master.designer.cs">
       <DependentUpon>gDien.Master</DependentUpon>
