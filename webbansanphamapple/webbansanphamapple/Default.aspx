@@ -27,22 +27,53 @@
         <!-- Đăng nhập / Đăng ký -->
         <ul class="navbar-nav ms-auto col-md-2">
             <li class="nav-item">
-                <a class="nav-link" href="#">Đăng nhập</a>
+                <a class="nav-link" href="login.aspx">Đăng nhập</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Đăng ký</a>
+                <a class="nav-link" href="register.aspx">Đăng ký</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Giỏ hàng (0)</a>
             </li>
         </ul>
     </nav>
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/Carousel/carosel3.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+                <img src="img/Carousel/carosel.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+                <img src="img/Carousel/carosel2.jpg" class="d-block w-100" />
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
     <!-- HERO -->
     <section class="py-5 text-center bg-white border-bottom">
         <div class="container">
-            <h1 class="display-5 fw-bold">Cửa hàng điện thoại Apple</h1>
-            <p class="lead">Khám phá các sản phẩm iPhone mới nhất với giá tốt nhất.</p>
-            <a href="#products" class="btn btn-primary btn-lg px-4">Xem sản phẩm</a>
+            <h1 class="display-5 fw-bold">Cửa hàng Apple</h1>
+            <p class="lead">Khám phá các sản phẩm Apple mới nhất với giá tốt nhất.</p>
+            <a href="product.aspx" class="btn btn-primary btn-lg px-4">Xem sản phẩm</a>
         </div>
     </section>
 
@@ -57,7 +88,7 @@
                 <!-- iPhone 16 Pro -->
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone16pro-gold" class="card-img-top" alt="iPhone 16 Pro" />
+                        <img src="img/products/ip15.jpg" class="card-img-top" alt="iPhone 16 Pro" />
                         <div class="card-body">
                             <h5 class="card-title">iPhone 16 Pro</h5>
                             <p class="card-text">Chip A18 Pro, khung Titanium, Camera 48MP.</p>
@@ -71,7 +102,7 @@
                 <!-- iPhone 15 Pro Max -->
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone15promax-black" class="card-img-top" alt="iPhone 15 Pro Max" />
+                        <img src="img/products/ip15.jpg" class="card-img-top" alt="iPhone 15 Pro Max" />
                         <div class="card-body">
                             <h5 class="card-title">iPhone 15 Pro Max</h5>
                             <p class="card-text">Titanium đẳng cấp, Camera Tele 5x.</p>
@@ -85,7 +116,7 @@
                 <!-- iPhone 14 -->
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone14-purple" class="card-img-top" alt="iPhone 14" />
+                        <img src="img/products/imac.jpg" class="card-img-top" alt="iPhone 14" />
                         <div class="card-body">
                             <h5 class="card-title">iPhone 14</h5>
                             <p class="card-text">Màn hình Super Retina, Camera kép.</p>
@@ -102,9 +133,9 @@
     <!-- FOOTER -->
     <footer class=" py-4 bg-dark text-light ">
         <div class="navbar-nav mx-auto col-md-10">
-                <p class="mb-0">© Nguyễn Tiến Dũng</p>
-                <p class="mb-0">Chuyên đề ASP.NET</p>
-                <p class="mb-0">© Đại học Trà Vinh</p>
+            <p class="mb-0">© Nguyễn Tiến Dũng</p>
+            <p class="mb-0">Chuyên đề ASP.NET</p>
+            <p class="mb-0">© Đại học Trà Vinh</p>
         </div>
     </footer>
 </body>

@@ -27,10 +27,10 @@
         <!-- Đăng nhập / Đăng ký -->
         <ul class="navbar-nav ms-auto col-md-2">
             <li class="nav-item">
-                <a class="nav-link" href="#">Đăng nhập</a>
+                <a class="nav-link" href="login.aspx">Đăng nhập</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Đăng ký</a>
+                <a class="nav-link" href="register.aspx">Đăng ký</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Giỏ hàng (0)</a>
@@ -40,66 +40,51 @@
     <!-- HERO -->
     <section class="py-5 text-center bg-white border-bottom">
         <div class="container">
-            <h1 class="display-5 fw-bold">Cửa hàng điện thoại Apple</h1>
-            <p class="lead">Khám phá các sản phẩm iPhone mới nhất với giá tốt nhất.</p>
-            <a href="#products" class="btn btn-primary btn-lg px-4">Xem sản phẩm</a>
+            <h1 class="display-5 fw-bold">Cửa hàng Apple</h1>
+            <p class="lead">Khám phá các sản phẩm Apple mới nhất với giá tốt nhất.</p>
         </div>
     </section>
 
 
     <!-- PRODUCT LIST -->
-    <section class="py-5" id="products">
+    
+    <form runat="server">
         <div class="container">
-            <h2 class="mb-4 fw-semibold">Danh sách sản phẩm</h2>
-
-
-            <div class="row g-4">
-                <!-- iPhone 16 Pro -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone16pro-gold" class="card-img-top" alt="iPhone 16 Pro" />
-                        <div class="card-body">
-                            <h5 class="card-title">iPhone 16 Pro</h5>
-                            <p class="card-text">Chip A18 Pro, khung Titanium, Camera 48MP.</p>
-                            <p class="fw-bold text-danger">Giá: 29.990.000₫</p>
-                            <a href="#" class="btn btn-outline-primary w-100">Mua ngay</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- iPhone 15 Pro Max -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone15promax-black" class="card-img-top" alt="iPhone 15 Pro Max" />
-                        <div class="card-body">
-                            <h5 class="card-title">iPhone 15 Pro Max</h5>
-                            <p class="card-text">Titanium đẳng cấp, Camera Tele 5x.</p>
-                            <p class="fw-bold text-danger">Giá: 27.490.000₫</p>
-                            <a href="#" class="btn btn-outline-primary w-100">Mua ngay</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- iPhone 14 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone14-purple" class="card-img-top" alt="iPhone 14" />
-                        <div class="card-body">
-                            <h5 class="card-title">iPhone 14</h5>
-                            <p class="card-text">Màn hình Super Retina, Camera kép.</p>
-                            <p class="fw-bold text-danger">Giá: 18.990.000₫</p>
-                            <a href="#" class="btn btn-outline-primary w-100">Mua ngay</a>
-                        </div>
-                    </div>
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        </div>
+        <section class="py-5" id="products">
+            <div class="container">
+                <div class="row g-4">
+                    <asp:Repeater ID="Repeater1" runat="server">
+                        <ItemTemplate>
+                            <!-- iPhone 16 Pro -->
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <!-- <img src="img/products/ip15.jpg" class="card-img-top" alt="iPhone 16 Pro" />-->
+                                    <asp:Image ImageUrl='<%#  Eval("ImageUrl") %>' runat="server" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <asp:Label runat="server" Text=' <%#  Eval("Name") %>'> </asp:Label>
+                                        </h5>
+                                        <p class="card-text">
+                                            <asp:Label runat="server" Text=' <%#  Eval("Description") %>'> </asp:Label>
+                                        </p>
+                                        <p class="fw-bold text-danger">
+                                            <asp:Label runat="server" Text=' <%#  Eval("Price") %>'>Giá :  </asp:Label>
+                                        </p>
+                                        <a href="#" class="btn btn-outline-primary w-100">Mua ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </form>
+    
 
-
-    <!-- FOOTER -->
+    <!-- FOOTER  -->
     <footer class=" py-4 bg-dark text-light ">
         <div class="navbar-nav mx-auto col-md-10">
             <p class="mb-0">© Nguyễn Tiến Dũng</p>
@@ -107,5 +92,63 @@
             <p class="mb-0">© Đại học Trà Vinh</p>
         </div>
     </footer>
+
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="ssadsd" id="modalImg" class="img-fluid rounded" />
+                        </div>
+                        <div class="col-md-7">
+                            <p id="modalDesc"></p>
+                            <p class="fw-bold text-danger" id="modalPrice"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary w-100">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // Gắn sự kiện click cho sản phẩm
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', function () {
+                const title = this.querySelector('.card-title').innerText;
+                const desc = this.querySelector('.card-text').innerText;
+                const price = this.querySelector('.fw-bold.text-danger').innerText;
+                const img = this.querySelector('img').src;
+
+                document.getElementById('modalTitle').innerText = title;
+                document.getElementById('modalDesc').innerText = desc;
+                document.getElementById('modalPrice').innerText = price;
+                document.getElementById('modalImg').src = img;
+
+                const modal = new bootstrap.Modal(document.getElementById('productModal'));
+                modal.show();
+            });
+        });
+
+    </script>
+       
 </body>
 </html>

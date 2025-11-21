@@ -67,12 +67,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="connection.cs" />
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="product.aspx.cs">
       <DependentUpon>product.aspx</DependentUpon>
@@ -82,8 +104,16 @@
       <DependentUpon>product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin.aspx" />
     <Content Include="content\bootstrap-grid.css" />
     <Content Include="content\bootstrap-grid.min.css" />
     <Content Include="content\bootstrap-grid.rtl.css" />
@@ -116,8 +146,18 @@
     <Content Include="content\bootstrap-grid.rtl.css.map" />
     <Content Include="content\bootstrap-grid.min.css.map" />
     <Content Include="content\bootstrap-grid.css.map" />
+    <Content Include="Default.Master" />
     <None Include="packages.config" />
+    <Content Include="img\Carousel\carosel.jpg" />
+    <Content Include="img\Carousel\carosel1.jpg" />
+    <Content Include="img\Carousel\carosel2.jpg" />
+    <Content Include="img\Carousel\carosel3.jpg" />
+    <Content Include="img\products\imac.jpg" />
+    <Content Include="img\products\ip15.jpg" />
+    <Content Include="img\products\macbook.jpg" />
+    <Content Include="login.aspx" />
     <Content Include="product.aspx" />
+    <Content Include="register.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -142,7 +182,7 @@
     <Content Include="default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="img\" />
+    <Folder Include="img\user\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
