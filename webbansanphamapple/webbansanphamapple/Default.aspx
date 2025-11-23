@@ -38,7 +38,7 @@
         </ul>
     </nav>
     <!-- Carousel -->
-    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <div id="demo" class="carousel slide h-75" data-bs-ride="carousel">
 
         <!-- Indicators/dots -->
         <div class="carousel-indicators">
@@ -131,7 +131,7 @@
 
 
     <!-- FOOTER -->
-    <footer class=" py-4 bg-dark text-light ">
+    <footer class="py-4 bg-dark text-light ">
         <div class="navbar-nav mx-auto col-md-10">
             <p class="mb-0">© Nguyễn Tiến Dũng</p>
             <p class="mb-0">Chuyên đề ASP.NET</p>

@@ -14,10 +14,7 @@ namespace webbansanphamapple
         connect conn = new connect();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["allow"] != null)
-            {
-                Response.Redirect("Default.aspx");
-            }
+      
         }
 
         [Obsolete]
@@ -37,12 +34,12 @@ namespace webbansanphamapple
                 if (Session["Role"].ToString() == "Admin") {
                     Response.Redirect("admin.aspx");
                 }else
-                    Response.Write("<script>console.log('" + tb.Rows[0][4].ToString() + "')</script>");
-              //  Response.Redirect("default.aspx"); // trả về trang Default
+                    //Response.Write("<script>console.log('" + tb.Rows[0][4].ToString() + "')</script>");
+                    Response.Redirect("default.aspx"); // trả về trang Default
 
             }
-            else Response.Write("<script>alert('Username/Password chưa đúng')</script>");
-            
+            else Response.Write("<script>alert('Username/Password chưa đúng')</script>"); // ngược lại hiện thông báo lỗi
+
         }
     }
 }

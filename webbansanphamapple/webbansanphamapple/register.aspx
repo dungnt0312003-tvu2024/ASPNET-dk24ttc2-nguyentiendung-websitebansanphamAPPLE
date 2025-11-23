@@ -60,7 +60,7 @@
         <asp:Button ID="btSignup" runat="server" Text="Đăng ký" OnClick="btSignup_Click" />
     </form>
     <!-- footer -->
-    <footer class=" py-4 bg-dark text-light ">
+    <footer class="py-4 bg-dark text-light ">
         <div class="navbar-nav mx-auto col-md-10">
             <p class="mb-0">© Nguyễn Tiến Dũng</p>
             <p class="mb-0">Chuyên đề ASP.NET</p>

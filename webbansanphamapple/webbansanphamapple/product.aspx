@@ -38,7 +38,7 @@
         </ul>
     </nav>
     <!-- HERO -->
-    <section class="py-5 text-center bg-white border-bottom">
+    <section class="py-5 text-center bg-white border-bottom p-5 m-5">
         <div class="container">
             <h1 class="display-5 fw-bold">Cửa hàng Apple</h1>
             <p class="lead">Khám phá các sản phẩm Apple mới nhất với giá tốt nhất.</p>
@@ -49,8 +49,15 @@
     <!-- PRODUCT LIST -->
     
     <form runat="server">
-        <div class="container">
-            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+       <div class="container ">
+           <div class="row">
+               <div class="col-xl-10">
+                   <asp:TextBox ID="txtSearch" runat="server" Class="form-control" Placeholder="Search.." AutoPostBack="true" OnTextChanged="txtSearch_TextChanged" />
+               </div>
+               <div class="col-sm-2">
+                   <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" class="btn btn-primary mb-3" OnClick="btnSearch_Click" />
+               </div>
+            </div>
         </div>
         <section class="py-5" id="products">
             <div class="container">
@@ -61,7 +68,7 @@
                             <div class="col-md-4">
                                 <div class="card h-100 shadow-sm">
                                     <!-- <img src="img/products/ip15.jpg" class="card-img-top" alt="iPhone 16 Pro" />-->
-                                    <asp:Image ImageUrl='<%#  Eval("ImageUrl") %>' runat="server" />
+                                    <asp:Image  class="card-img-top" ImageUrl='<%#  Eval("ImageUrl") %>' runat="server" />
                                     <div class="card-body">
                                         <h5 class="card-title">
                                             <asp:Label runat="server" Text=' <%#  Eval("Name") %>'> </asp:Label>
@@ -80,12 +87,13 @@
                     </asp:Repeater>
                 </div>
             </div>
-        </section>
-    </form>
-    
+        </section>        
 
-    <!-- FOOTER  -->
-    <footer class=" py-4 bg-dark text-light ">
+    </form>
+
+
+    <!-- FOOTER -->
+    <footer class="py-4 bg-dark text-light ">
         <div class="navbar-nav mx-auto col-md-10">
             <p class="mb-0">© Nguyễn Tiến Dũng</p>
             <p class="mb-0">Chuyên đề ASP.NET</p>
@@ -119,36 +127,37 @@
     </div>
 
     <script>
-        $(document).ready(function () {
-            $("#myInput").on("keyup", function () {
-                var value = $(this).val().toLowerCase();
-                $("#myTable tr").filter(function () {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
+
+        document.getElementById("myInput").addEventListener("keyup", function () {
+            var keyword = this.value.toLowerCase();
+            var rows = document.querySelectorAll("#myTable tr");
+
+            rows.forEach(function (row) {
+                var text = row.innerText.toLowerCase();
+                row.style.display = text.includes(keyword) ? "" : "none";
             });
-        });
     </script>
 
     <script>
-        // Gắn sự kiện click cho sản phẩm
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('click', function () {
-                const title = this.querySelector('.card-title').innerText;
-                const desc = this.querySelector('.card-text').innerText;
-                const price = this.querySelector('.fw-bold.text-danger').innerText;
-                const img = this.querySelector('img').src;
+            // Gắn sự kiện click cho sản phẩm
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('click', function () {
+                    const title = this.querySelector('.card-title').innerText;
+                    const desc = this.querySelector('.card-text').innerText;
+                    const price = this.querySelector('.fw-bold.text-danger').innerText;
+                    const img = this.querySelector('img').src;
 
-                document.getElementById('modalTitle').innerText = title;
-                document.getElementById('modalDesc').innerText = desc;
-                document.getElementById('modalPrice').innerText = price;
-                document.getElementById('modalImg').src = img;
+                    document.getElementById('modalTitle').innerText = title;
+                    document.getElementById('modalDesc').innerText = desc;
+                    document.getElementById('modalPrice').innerText = price;
+                    document.getElementById('modalImg').src = img;
 
-                const modal = new bootstrap.Modal(document.getElementById('productModal'));
-                modal.show();
+                    const modal = new bootstrap.Modal(document.getElementById('productModal'));
+                    modal.show();
+                });
             });
-        });
 
     </script>
-       
+
 </body>
 </html>

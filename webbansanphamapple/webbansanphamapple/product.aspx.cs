@@ -37,5 +37,36 @@ namespace webbansanphamapple
         {
 
         }
+        protected void btnSearch_Click(object sender, EventArgs e) //Hàm tìm kiếm sản phẩm khi click nút tìm kiếm
+        {
+            string keyword = txtSearch.Text.Trim();
+
+            string query = "SELECT * FROM Products WHERE Name LIKE @kw OR Description LIKE @kw";
+            SqlCommand cmd = new SqlCommand(query, conn.con);
+            cmd.Parameters.AddWithValue("@kw", "%" + keyword + "%");
+
+            conn.con.Open();
+            Repeater1.DataSource = cmd.ExecuteReader();
+            Repeater1.DataBind();
+            conn.con.Close();
+        }
+        protected void txtSearch_TextChanged(object sender, EventArgs e)//Hàm tìm kiếm khi gõ trong ô tìm kiếm
+        {
+            LoadData(txtSearch.Text.Trim());
+        }
+
+        private void LoadData(string keyword)//Hàm tìm kiếm khi gõ trong ô tìm kiếm
+        {
+            string query = "SELECT * FROM Products WHERE Name LIKE @kw OR Description LIKE @kw";
+
+            SqlCommand cmd = new SqlCommand(query, conn.con);
+            cmd.Parameters.AddWithValue("@kw", "%" + keyword + "%");
+
+            conn.con.Open();
+            Repeater1.DataSource = cmd.ExecuteReader();
+            Repeater1.DataBind();
+            conn.con.Close();
+        }
+
     }
 }

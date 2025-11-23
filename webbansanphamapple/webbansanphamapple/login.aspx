@@ -38,30 +38,38 @@
                 <a class="nav-link" href="register.aspx">Đăng ký</a>
             </li>
             <li class="nav-item">
-                <script>console.log('hello');</script>
+              
                 <a class="nav-link" href="#">Giỏ hàng (0)</a>
             </li>
         </ul>
     </nav>
     <!-- login form-->
-    <form id="form1" runat="server" class="container-fluid" >
-        <asp:Label ID="Label1" runat="server" Text="Username: "></asp:Label>
-        <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" required="required"></asp:TextBox>
-        <br />
-        <asp:Label ID="Label2" runat="server" Text="Password: "></asp:Label>
-        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" required="required"></asp:TextBox>
-        <br />
-        <asp:Button class="btn btn-primary" ID="btLogin" runat="server" Text="Login" OnClick="btLogin_Click" />
-    </form>
+
+    <section class=" m-5 border-bottom p-5">
+        <h1 class="text-center mt-4">Đăng nhập để thanh toán nhanh hơn. </h1>
+        <h3 class="text-center mt-4">Đăng nhập vào Apple Store </h3>
+        <div class="container p-4">
+            <form id="form1" runat="server" class="container">
+                <asp:Label ID="Label1" runat="server" Text="Tên đăng nhập: "></asp:Label>
+                <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" required="required"></asp:TextBox>
+                <br />
+                <asp:Label ID="Label2" runat="server" Text="Mật khẩu: "></asp:Label>
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" required="required"></asp:TextBox>
+                <br />
+                <asp:Button class="btn btn-primary" ID="btLogin" runat="server" Text="Đăng Nhập" OnClick="btLogin_Click" />
+            </form>
+        </div>
+    </section>
+
 
     <!-- footer -->
-    <footer class=" py-4 bg-dark text-light ">
+    <footer class="py-4 bg-dark text-light ">
         <div class="navbar-nav mx-auto col-md-10">
             <p class="mb-0">© Nguyễn Tiến Dũng</p>
             <p class="mb-0">Chuyên đề ASP.NET</p>
             <p class="mb-0">© Đại học Trà Vinh</p>
         </div>
     </footer>
-    
+
 </body>
 </html>
