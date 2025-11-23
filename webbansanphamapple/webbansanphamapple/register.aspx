@@ -1,18 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="webbansanphamapple.register" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="register.aspx.cs" MasterPageFile="~/Default.Master" Inherits="webbansanphamapple.register" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta name="viewport" content="width=device-width" />
-    <meta charset="utf-8" />
-    <link href="~/content/bootstrap.css" rel="stylesheet" />
-    <script src="Scripts/bootstrap.js"></script>
-    <title>Apple Product Store</title>
-</head>
-<body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <ul class="navbar-nav mx-auto col-md-8 ">
             <li class="nav-item">
                 <a class="nav-link" href="default.aspx">Trang chủ</a>
@@ -37,7 +29,6 @@
             </li>
         </ul>
     </nav>
-
     <!-- register form-->
 
     <form id="form1" runat="server">
@@ -59,13 +50,8 @@
         <br />
         <asp:Button ID="btSignup" runat="server" Text="Đăng ký" OnClick="btSignup_Click" />
     </form>
-    <!-- footer -->
-    <footer class="py-4 bg-dark text-light ">
-        <div class="navbar-nav mx-auto col-md-10">
-            <p class="mb-0">© Nguyễn Tiến Dũng</p>
-            <p class="mb-0">Chuyên đề ASP.NET</p>
-            <p class="mb-0">© Đại học Trà Vinh</p>
-        </div>
-    </footer>
-</body>
-</html>
+
+
+</asp:Content>
+
+

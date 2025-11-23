@@ -1,17 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin.aspx.cs" Inherits="webbansanphamapple.admin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Default.Master" CodeBehind="admin.aspx.cs" Inherits="webbansanphamapple.admin" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta name="viewport" content="width=device-width" />
-    <meta charset="utf-8" />
-    <link href="~/content/bootstrap.css" rel="stylesheet" />
-    <script src="Scripts/bootstrap.bundle.min.js"></script>
-    <script src="Scripts/bootstrap.js"></script>
-    <script src="Scripts/jquery-3.6.0.min.js"></script>
-    <title>Apple Product Store</title>
-    <style type="text/css">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+        <style type="text/css">
         #form1 {
             width: 458px;
         }
@@ -21,13 +11,14 @@
             height: 200px;
         }
     </style>
-</head>
-<body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   <form runat="server" > <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <ul class="navbar-nav mx-auto col-md-8 ">
             <li class="nav-item">
-                <a class="nav-link " href="default.aspx">Trang chủ</a>
+                <a class="nav-link" href="default.aspx">Trang chủ</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="product.aspx">Sản phẩm</a>
@@ -36,10 +27,21 @@
                 <a class="nav-link" href="#">Liên hệ</a>
             </li>
         </ul>
-        <!-- Đăng nhập / Đăng ký -->
+        <!-- Đăng xuất -->
         <ul class="navbar-nav ms-auto col-md-2">
+            <li class="nav-item p-2">
+                <asp:Label runat="server" ID="lblXinchao" class="text-light" ></asp:Label>
+            </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#">Đăng nhập</a>
+                <asp:Button runat="server" text="Đăng Xuất" OnClick="log_out" class="btn btn-success"/>
+            </li>
+            
+            
+        </ul>
+        <!-- Đăng nhập / Đăng ký -->
+        <ul class="navbar-nav ms-auto col-md-2" id="info">
+            <li class="nav-item">
+                <a class="nav-link" href="login.aspx">Đăng nhập</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="register.aspx">Đăng ký</a>
@@ -49,25 +51,16 @@
             </li>
         </ul>
     </nav>
-    <section class="py-5 text-center bg-white border-bottom">
-        <div accesskey="main-content" class="container">
-            <h2>Admin Page</h2>
-            <p>Welcome to the admin section of the Apple Product Store.</p>
-        </div>
-    </section>
-
-
     <!-- Bảng danh sách sản phẩm -->
-    <div class="container">
-        <form runat="server" >
-            <asp:ScriptManager ID="ScriptManager1" runat="server" />
-            <asp:UpdatePanel ID="up1" runat="server">
+    <div class="container p-3">
+        
+            <asp:ScriptManager ID="ScriptManager1" runat="server" /> 
+            <asp:UpdatePanel ID="up1" runat="server" UpdateMode="Conditional">
                 <ContentTemplate>
-
                     <h2>Danh sách Sản phẩm
                     </h2>
                     <input class="form-control" id="myInput" type="text" placeholder="Search.." />
-                    <asp:Button runat="server" text="Thêm sản phẩm" CommandName="addItem" OnClick="Them_Click"/>
+                    <asp:Button runat="server" text="Thêm sản phẩm" CssClass="btn btn-primary" CommandName="addItem"/>
                     <br />
                     <!-- Repeater hiển thị sản phẩm -->
                     <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
@@ -94,10 +87,13 @@
                                     <td><%#  Eval("Price")     %>   đ</td>
                                     <td>
                                         <asp:Image class="card-img-top rounded sp" ImageUrl='<%#  Eval("ImageUrl") %>' runat="server" /></td>
+                                   
                                     <td>
-                                        <asp:Button ID="btSua" runat="server" CommandArgument='<%# Eval("ProductId") %>' Text="Sửa"  CommandName="EditItem" /></td>
+
+                                        <asp:Button ID="btSua" runat="server" class="btn btn-warning" CommandArgument='<%# Eval("ProductId") %>' Text="Sửa"  CommandName="EditItem" /></td>
+
                                     <td>
-                                        <asp:Button ID="btXoa" runat="server" CommandArgument='<%# Eval("ProductId") %>' Text="Xóa"  CommandName="DeleteItem" /></td>
+                                        <asp:Button ID="btXoa" runat="server" class="btn btn-danger"  CommandArgument='<%# Eval("ProductId") %>' Text="Xóa"  CommandName="DeleteItem" /></td>
                                 </tr>
                              <!-- </tbody>-->
                         </ItemTemplate>
@@ -131,7 +127,7 @@
                                  <asp:Image ID="img" class="card-img-top rounded sp" runat="server" />
 
                                  <asp:TextBox ID="txtEditImage" runat="server" CssClass="form-control"></asp:TextBox>
-                                 <asp:FileUpload ID="FileUpload1" runat="server" CssClass="form-control btn btn-primary"  />
+                                 <asp:FileUpload ID="FileUpload1"  runat="server" CssClass="form-control btn btn-primary"  />
                                 </div>
                                 <div class="modal-footer">
                                     <asp:Button ID="btnSave" runat="server" Text="Lưu" CssClass="btn btn-primary" OnClick="btnSave_Click" />
@@ -182,7 +178,9 @@
                                  <asp:Image ID="Image1" class="card-img-top rounded sp" runat="server" />
 
                                  <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control"></asp:TextBox>
+
                                  <asp:FileUpload ID="FileUpload2" runat="server" CssClass="form-control btn btn-primary"  />
+
                                 </div>
                                 <div class="modal-footer">
                                     <asp:Button ID="Button1" runat="server" Text="Thêm sản phẩm" CssClass="btn btn-primary" OnClick="btnThem_Click" />
@@ -195,22 +193,10 @@
                     <asp:PostBackTrigger ControlID="btnSave" />  
                 </Triggers>
             </asp:UpdatePanel>
-        </form>
        
-
     </div>
+        </form>
+
+</asp:Content>
 
 
-
-
-    <!-- FOOTER -->
-    <footer class="py-4 bg-dark text-light ">
-        <div class="navbar-nav mx-auto col-md-10">
-            <p class="mb-0">© Nguyễn Tiến Dũng</p>
-            <p class="mb-0">Chuyên đề ASP.NET</p>
-            <p class="mb-0">© Đại học Trà Vinh</p>
-        </div>
-    </footer>
-
-</body>
-</html>

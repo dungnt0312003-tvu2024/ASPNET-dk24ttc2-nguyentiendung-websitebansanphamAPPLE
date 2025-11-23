@@ -96,6 +96,7 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="log_out.cs" />
     <Compile Include="product.aspx.cs">
       <DependentUpon>product.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,6 +111,13 @@
     </Compile>
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -146,7 +154,9 @@
     <Content Include="content\bootstrap-grid.rtl.css.map" />
     <Content Include="content\bootstrap-grid.min.css.map" />
     <Content Include="content\bootstrap-grid.css.map" />
+    <Content Include="default.aspx" />
     <Content Include="Default.Master" />
+    <Content Include="WebForm1.aspx" />
     <None Include="packages.config" />
     <Content Include="img\Carousel\carosel.jpg" />
     <Content Include="img\Carousel\carosel1.jpg" />
@@ -180,9 +190,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="default.aspx" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="img\user\" />
   </ItemGroup>
   <PropertyGroup>
@@ -201,6 +208,8 @@
           <DevelopmentServerPort>54525</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>https://localhost:44338/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>https://localhost:44338/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

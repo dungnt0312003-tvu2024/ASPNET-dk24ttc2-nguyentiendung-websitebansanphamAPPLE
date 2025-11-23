@@ -1,24 +1,21 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="product.aspx.cs" Inherits="webbansanphamapple.product" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="product.aspx.cs" MasterPageFile="~/Default.Master" Inherits="webbansanphamapple.product" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+        <style type="text/css">
+    #form1 {
+        width: 458px;
+    }
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta name="viewport" content="width=device-width" />
-    <meta charset="utf-8" />
-    <link href="~/content/bootstrap.css" rel="stylesheet" />
-    <script src="Scripts/bootstrap.js"></script>
-    <title>Product</title>
-</head>
-<body>
+</style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <ul class="navbar-nav mx-auto col-md-8 ">
             <li class="nav-item">
-                <a class="nav-link " href="default.aspx">Trang chủ</a>
+                <a class="nav-link" href="default.aspx">Trang chủ</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="product.aspx">Sản phẩm</a>
+                <a class="nav-link  active" href="product.aspx">Sản phẩm</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Liên hệ</a>
@@ -37,17 +34,13 @@
             </li>
         </ul>
     </nav>
-    <!-- HERO -->
-    <section class="py-5 text-center bg-white border-bottom p-5 m-5">
+    <section class="py-5 text-center bg-white border-bottom m-5">
         <div class="container">
             <h1 class="display-5 fw-bold">Cửa hàng Apple</h1>
             <p class="lead">Khám phá các sản phẩm Apple mới nhất với giá tốt nhất.</p>
+            <a href="product.aspx" class="btn btn-primary btn-lg px-4">Xem sản phẩm</a>
         </div>
     </section>
-
-
-    <!-- PRODUCT LIST -->
-    
     <form runat="server">
        <div class="container ">
            <div class="row">
@@ -68,7 +61,9 @@
                             <div class="col-md-4">
                                 <div class="card h-100 shadow-sm">
                                     <!-- <img src="img/products/ip15.jpg" class="card-img-top" alt="iPhone 16 Pro" />-->
-                                    <asp:Image  class="card-img-top" ImageUrl='<%#  Eval("ImageUrl") %>' runat="server" />
+                                    <div class="container">
+                                        <asp:Image  class="card-img-top sp" ImageUrl='<%#  Eval("ImageUrl") %>' runat="server" />
+                                    </div>
                                     <div class="card-body">
                                         <h5 class="card-title">
                                             <asp:Label runat="server" Text=' <%#  Eval("Name") %>'> </asp:Label>
@@ -91,16 +86,7 @@
 
     </form>
 
-
-    <!-- FOOTER -->
-    <footer class="py-4 bg-dark text-light ">
-        <div class="navbar-nav mx-auto col-md-10">
-            <p class="mb-0">© Nguyễn Tiến Dũng</p>
-            <p class="mb-0">Chuyên đề ASP.NET</p>
-            <p class="mb-0">© Đại học Trà Vinh</p>
-        </div>
-    </footer>
-
+<!-- modal sản phẩm -->
     <div class="modal fade" id="productModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
@@ -111,7 +97,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-5">
-                            <img src="ssadsd" id="modalImg" class="img-fluid rounded" />
+                            <img src="ssadsd" id="modalImg" class="img-fluid rounded sp" />
                         </div>
                         <div class="col-md-7">
                             <p id="modalDesc"></p>
@@ -158,6 +144,6 @@
             });
 
     </script>
+</asp:Content>
 
-</body>
-</html>
+

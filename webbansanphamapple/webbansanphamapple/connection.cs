@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Web.Security;
+using System.Web.SessionState;
 
 namespace webbansanphamapple
 {
@@ -19,7 +20,6 @@ namespace webbansanphamapple
         {
             return System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(pass.Trim(), "SHA1");
         }
-
     }
 
-}
+    }

@@ -3,48 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|c:\\users\\mr.d\\downloads\\web-apple\\aspnet-dk24ttc2-nguyentiendung-websitebansanphamapple\\webbansanphamapple\\webbansanphamapple\\admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\product.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\product.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\product.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\product.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\default.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\default.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\product.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\product.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|c:\\users\\mr.d\\downloads\\web-apple\\aspnet-dk24ttc2-nguyentiendung-websitebansanphamapple\\webbansanphamapple\\webbansanphamapple\\admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{C82860E3-78D2-43A9-B305-644C1D85C212}|webbansanphamapple\\webbansanphamapple.csproj|solutionrelative:webbansanphamapple\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,42 +38,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "connection.cs",
-              "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\connection.cs",
-              "RelativeDocumentMoniker": "webbansanphamapple\\connection.cs",
-              "ToolTip": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\connection.cs",
-              "RelativeToolTip": "webbansanphamapple\\connection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T16:12:15.113Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "admin.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\admin.aspx.cs",
               "RelativeDocumentMoniker": "webbansanphamapple\\admin.aspx.cs",
               "ToolTip": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\admin.aspx.cs",
               "RelativeToolTip": "webbansanphamapple\\admin.aspx.cs",
-              "ViewState": "AgIAANcAAAAAAAAAAAAAANsAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T08:32:49.253Z",
+              "WhenOpened": "2025-11-23T05:46:31.419Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "admin.aspx",
               "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\admin.aspx",
               "RelativeDocumentMoniker": "webbansanphamapple\\admin.aspx",
@@ -102,32 +72,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "product.aspx",
-              "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\product.aspx",
-              "RelativeDocumentMoniker": "webbansanphamapple\\product.aspx",
-              "ToolTip": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\product.aspx",
-              "RelativeToolTip": "webbansanphamapple\\product.aspx",
+              "DocumentIndex": 2,
+              "Title": "Default.Master",
+              "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\Default.Master",
+              "RelativeDocumentMoniker": "webbansanphamapple\\Default.Master",
+              "ToolTip": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\Default.Master",
+              "RelativeToolTip": "webbansanphamapple\\Default.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-18T03:53:03.444Z",
+              "WhenOpened": "2025-11-23T04:38:46.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "product.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\product.aspx.cs",
-              "RelativeDocumentMoniker": "webbansanphamapple\\product.aspx.cs",
-              "ToolTip": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\product.aspx.cs",
-              "RelativeToolTip": "webbansanphamapple\\product.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T02:32:23.129Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "default.aspx",
               "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\default.aspx",
               "RelativeDocumentMoniker": "webbansanphamapple\\default.aspx",
@@ -135,12 +93,25 @@
               "RelativeToolTip": "webbansanphamapple\\default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-18T03:15:02.133Z",
+              "WhenOpened": "2025-11-23T05:30:41.188Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "product.aspx",
+              "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\product.aspx",
+              "RelativeDocumentMoniker": "webbansanphamapple\\product.aspx",
+              "ToolTip": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\product.aspx",
+              "RelativeToolTip": "webbansanphamapple\\product.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-23T05:11:51.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "login.aspx",
               "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\login.aspx",
               "RelativeDocumentMoniker": "webbansanphamapple\\login.aspx",
@@ -148,48 +119,12 @@
               "RelativeToolTip": "webbansanphamapple\\login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-18T16:19:14.919Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "login.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\login.aspx.cs",
-              "RelativeDocumentMoniker": "webbansanphamapple\\login.aspx.cs",
-              "ToolTip": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\login.aspx.cs",
-              "RelativeToolTip": "webbansanphamapple\\login.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T08:06:02.92Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "register.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\register.aspx.cs",
-              "RelativeDocumentMoniker": "webbansanphamapple\\register.aspx.cs",
-              "ToolTip": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\register.aspx.cs",
-              "RelativeToolTip": "webbansanphamapple\\register.aspx.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowCEAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T08:15:47.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "web.config",
-              "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\web.config",
-              "RelativeDocumentMoniker": "webbansanphamapple\\web.config",
-              "ToolTip": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\web.config",
-              "RelativeToolTip": "webbansanphamapple\\web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-11-18T16:30:02.454Z",
+              "WhenOpened": "2025-11-18T16:19:14.919Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "register.aspx",
               "DocumentMoniker": "C:\\Users\\Mr.D\\Downloads\\Web-apple\\ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE\\webbansanphamapple\\webbansanphamapple\\register.aspx",
               "RelativeDocumentMoniker": "webbansanphamapple\\register.aspx",
@@ -197,7 +132,8 @@
               "RelativeToolTip": "webbansanphamapple\\register.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-18T16:19:25.709Z"
+              "WhenOpened": "2025-11-18T16:19:25.709Z",
+              "EditorCaption": ""
             }
           ]
         }

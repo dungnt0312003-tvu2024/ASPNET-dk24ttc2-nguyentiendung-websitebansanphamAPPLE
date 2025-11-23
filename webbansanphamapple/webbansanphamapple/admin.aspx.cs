@@ -4,9 +4,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace webbansanphamapple
 {
@@ -15,73 +17,70 @@ namespace webbansanphamapple
         connect conn = new connect();
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
+            this.Page.Form.Enctype = "multipart/form-data";
+
             if (Session["Role"] == null || Session["Role"].ToString() != "Admin")
             {
                 Response.Redirect("login.aspx");
+
             }
-            if (!IsPostBack)
+            else if(!IsPostBack)
             {
-                DS();
+                ScriptManager.RegisterStartupScript(
+                    this,
+                        GetType(),
+                        "hideLogin",
+                        "const login = document.getElementById('info'); login.remove();",
+                        true
+                );
+                lblXinchao.Text = "Xin chào : " + Session["Username"].ToString() + "" ;
+
+                viewSP();
+
             }
+
+
+            
         }
 
-        public void DS()
-        {
-            SqlDataAdapter da = new SqlDataAdapter("select * from Products", conn.con);
 
-            //String query = string.Format("select * from Products");
-            //SqlCommand comm = new SqlCommand(query, conn.con);
-            //conn.con.Open();
-            //SqlDataReader dr = comm.ExecuteReader();
+        // Hiển thị sản phẩm ra bảng
+        public void viewSP()
+        {
+            
+            SqlDataAdapter da = new SqlDataAdapter("select * from Products", conn.con);
             DataTable tb = new DataTable();
             da.Fill(tb);
             Repeater1.DataSource = tb;
             Repeater1.DataBind();
-            //conn.con.Close();
         }
 
-        protected void btThem_Click(object sender, EventArgs e)
+        //Nút Lưu trong modal Sửa
+        protected void btnSave_Click(object sender, EventArgs e)
         {
-            //string masv = txtMasv.Text;
+            string imagePath = txtEditImage.Text; // giữ ảnh cũ
 
-            //string email = txtEmail.Text;
-            //string tensv = txtTensv.Text;
-
-
-
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.Connection = conn.con;
-            //cmd.CommandText = "insert into tblSinhvien(Masv,Email) values('" + masv + "','" + email + "')";
-            //cmd.CommandType = CommandType.Text;
-
-            //conn.con.Open(); // mo ket noi
-            //cmd.ExecuteNonQuery(); // thực thi 
-            //conn.con.Close(); // dong ket noi
-            //Response.Redirect("QLGV.aspx");
-
-        }
-   
-     
-        protected void btnSave_Click(object sender, EventArgs e) // nhấn nút sửa trong popup
-        {
-            string imagePath = txtEditImage.Text;
             try
             {
-                if (FileUpload1.HasFile && CheckFileType(FileUpload1.FileName))
+                // Nếu có chọn file mới thì upload
+                if (FileUpload1.HasFile)
                 {
                     string dir = Server.MapPath("~/img/products/");
                     if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
-
-                    string fileName = DateTime.Now.ToString("yyyyMMdd_hhmmss_") + FileUpload1.FileName;
+                  
+                    string fileName = DateTime.Now.Ticks + "_" + FileUpload1.FileName;
                     string fullPath = Path.Combine(dir, fileName);
-
                     FileUpload1.SaveAs(fullPath);
-
                     imagePath = "img/products/" + fileName;
+                    img.ImageUrl = imagePath;
                 }
 
                 SqlCommand cmd = new SqlCommand(
-        "UPDATE Products SET Name=@n, Description=@d, Price=@p, ImageUrl=@i WHERE ProductId=@id", conn.con);
+                    "UPDATE Products SET Name=@n, Description=@d, Price=@p, ImageUrl=@i WHERE ProductId=@id",
+                    conn.con
+                );
 
                 cmd.Parameters.AddWithValue("@n", txtEditName.Text);
                 cmd.Parameters.AddWithValue("@d", txtEditDesc.Text);
@@ -93,18 +92,23 @@ namespace webbansanphamapple
                 cmd.ExecuteNonQuery();
                 conn.con.Close();
 
-                DS();
+                viewSP();
 
-                ScriptManager.RegisterStartupScript(this, GetType(), "HideEditModal",  "$('#editModal').modal('hide'); $('.modal-backdrop').remove(); $('body').removeClass('modal-open');",    true);
-
-
+                ScriptManager.RegisterStartupScript(
+                    this,
+                    GetType(),
+                    "CloseModal",
+                    "$('#editModal').modal('hide');",
+                    true
+                );
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('Lỗi Upload: " + ex.Message + "');</script>");
             }
-
         }
+
+        //Nút Xác nhận xóa trong modal Xóa
         protected void btnConfirmDelete_Click(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand("DELETE FROM Products WHERE ProductId=@id", conn.con);
@@ -114,40 +118,60 @@ namespace webbansanphamapple
             cmd.ExecuteNonQuery();
             conn.con.Close();
 
-            DS(); // cập nhật bảng
+            viewSP(); // cập nhật bảng
 
             ScriptManager.RegisterStartupScript(this, GetType(), "HideDelete", "$('#deleteModal').modal('hide'); $('.modal-backdrop').remove(); $('body').removeClass('modal-open');",  true);
 
             Response.Redirect("admin.aspx");
         }
+
+        // Xử lý các lệnh từ Repeater
         protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             int id = int.Parse(e.CommandArgument.ToString());
 
             if (e.CommandName == "EditItem")
             {
+
                 // Load dữ liệu ra modal sửa
                 LoadProductToModal(id);
             }
 
             if (e.CommandName == "DeleteItem")
             {
+
                 hfDeleteId.Value = id.ToString();
-                ScriptManager.RegisterStartupScript(this, GetType(), "showDelete", "$('#deleteModal').modal('show');", true);
+                ScriptManager.RegisterStartupScript(
+                        this,
+                        GetType(),
+                        "ShowDeleteModal",
+                        "var delModal = new bootstrap.Modal(document.getElementById('deleteModal')); delModal.show();",
+                        true
+                    );
 
             }
             if (e.CommandName == "addItem")
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "ShowAddModal","$('#addModal').modal('show');", true);
+
+                ScriptManager.RegisterStartupScript(
+                    this,
+                        GetType(),
+                        "ShowaddModal",
+                        "var addModal = new bootstrap.Modal(document.getElementById('addModal')); addModal.show();",
+                        true
+                );
+
             }
 
 
         }
-        private void LoadProductToModal(int id) // load dữ liệu sản phẩm vào modal sửa
+
+        // Load dữ liệu sản phẩm vào modal sửa
+        private void LoadProductToModal(int id) 
         {
             SqlCommand cmd = new SqlCommand("SELECT * FROM Products WHERE ProductId=@id", conn.con);
             cmd.Parameters.AddWithValue("@id", id);
-
+            
             conn.con.Open();
             SqlDataReader rd = cmd.ExecuteReader();
 
@@ -162,13 +186,21 @@ namespace webbansanphamapple
             }
             rd.Close();
             conn.con.Close();
+            // Sử dụng cú pháp Bootstrap 5 thuần
+            ScriptManager.RegisterStartupScript(
+                 this,
+                        GetType(),
+                        "ShoweditModal",
+                        "var editModal = new bootstrap.Modal(document.getElementById('editModal')); editModal.show();",
+                        true
+             );
 
-            ScriptManager.RegisterStartupScript(this, GetType(), "ShowEditModal",
-                "$('#editModal').modal('show');", true);
+
+
         }
 
-
-        bool CheckFileType(string fileName) // check file ảnh up load
+        // Kiểm tra định dạng file ảnh
+        bool CheckFileType(string fileName) 
         {
 
             string ext = Path.GetExtension(fileName);
@@ -187,6 +219,7 @@ namespace webbansanphamapple
             }
         }
 
+        //Nút Thêm trong modal Thêm
         protected void btnThem_Click(object sender, EventArgs e)
         {
             string tenSP = txttenSPADD.Text;
@@ -215,15 +248,18 @@ namespace webbansanphamapple
             cmd.ExecuteNonQuery(); // thực thi 
             conn.con.Close(); // dong ket noi
 
-            DS();
+            viewSP();
             ScriptManager.RegisterStartupScript(this, GetType(), "HideAddModal", "$('#addModal').modal('hide'); $('.modal-backdrop').remove(); $('body').removeClass('modal-open');", true);
             Response.Redirect("admin.aspx");
 
         }
 
-        protected void Them_Click(object sender, EventArgs e)
+        protected void log_out(object sender, EventArgs e)
         {
-            ScriptManager.RegisterStartupScript(this, GetType(), "ShowAddModal", "$('#addModal').modal('show');", true);
+            Session["Role"] = null;
+            Response.Redirect("login.aspx");
         }
+
+
     }
 }
