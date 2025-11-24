@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.IO;
+using System.Reflection;
 using System.Xml.Linq;
 
 namespace webbansanphamapple
 {
-    public partial class admin : System.Web.UI.Page
+    public partial class qlsp : System.Web.UI.Page
     {
         connect conn = new connect();
         protected void Page_Load(object sender, EventArgs e)
@@ -28,13 +28,7 @@ namespace webbansanphamapple
             }
             else if(!IsPostBack)
             {
-                ScriptManager.RegisterStartupScript(
-                    this,
-                        GetType(),
-                        "hideLogin",
-                        "const login = document.getElementById('info'); login.remove();",
-                        true
-                );
+                
                 lblXinchao.Text = "Xin chào : " + Session["Username"].ToString() + "" ;
 
                 viewSP();
@@ -139,7 +133,6 @@ namespace webbansanphamapple
 
             if (e.CommandName == "DeleteItem")
             {
-
                 hfDeleteId.Value = id.ToString();
                 ScriptManager.RegisterStartupScript(
                         this,
@@ -150,20 +143,7 @@ namespace webbansanphamapple
                     );
 
             }
-            if (e.CommandName == "addItem")
-            {
-
-                ScriptManager.RegisterStartupScript(
-                    this,
-                        GetType(),
-                        "ShowaddModal",
-                        "var addModal = new bootstrap.Modal(document.getElementById('addModal')); addModal.show();",
-                        true
-                );
-
-            }
-
-
+      
         }
 
         // Load dữ liệu sản phẩm vào modal sửa
@@ -220,39 +200,141 @@ namespace webbansanphamapple
         }
 
         //Nút Thêm trong modal Thêm
+        //protected void btnThem_Click(object sender, EventArgs e)
+        //{
+        //    String imagePath;
+        //    // Nếu có chọn file mới thì upload
+        //    if (FileUpload2.HasFile)
+        //    {
+        //        string dir = Server.MapPath("~/img/products/");
+        //        if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+
+        //        string fileName = DateTime.Now.Ticks + "_" + FileUpload1.FileName;
+        //        string fullPath = Path.Combine(dir, fileName);
+        //        FileUpload2.SaveAs(fullPath);
+        //        imagePath = "img/products/" + fileName;
+        //        imgadd.ImageUrl = imagePath;
+        //        txtaddimg.Text = imagePath;
+        //        string tenSP = txttenSPADD.Text;
+        //        string chitiet = txtchiTietADD.Text;
+        //        string gia = txtgiaSPADD.Text;
+
+        //        Double giaSP = Convert.ToDouble(gia);
+
+
+        //        SqlCommand cmd = new SqlCommand();
+        //        cmd.Connection = conn.con;
+        //        cmd.CommandText = "INSERT INTO [dbo].[Products]      " +
+        //            "([Name]       " +
+        //            " ,[Description]         " +
+        //            " ,[Price]         " +
+        //            " ,[ImageUrl]           ," +
+        //            "[CategoryId])    " +
+        //            " VALUES           " +
+        //            "('" + tenSP + "', " +
+        //            "'" + chitiet + "'," +
+        //            "" + giaSP + "," +
+        //            "'" + imagePath + "', " +
+        //            "3) ";
+        //         Response.Write("<script>console.log("+ cmd.CommandText.ToString() + ")</script>");
+        //        cmd.CommandType = CommandType.Text;
+
+        //        conn.con.Open(); // mo ket noi
+        //        cmd.ExecuteNonQuery(); // thực thi 
+        //        conn.con.Close(); // dong ket noi
+
+        //        viewSP();
+        //        ScriptManager.RegisterStartupScript(this, GetType(), "HideAddModal", "$('#addModal').modal('hide'); $('.modal-backdrop').remove(); $('body').removeClass('modal-open');", true);
+        //        Response.Redirect("qlsp.aspx");
+        //    }
+
+
+        //}
         protected void btnThem_Click(object sender, EventArgs e)
         {
-            string tenSP = txttenSPADD.Text;
-            string chitiet = txtchiTietADD.Text;
-            string gia = txtgiaSPADD.Text;
-            Double giaSP = Convert.ToDouble(gia);
+  
+            try
+            {
+                string imagePath = "";
 
+                // Validate file có chọn không
+                if (!FileUpload2.HasFile)
+                {
+                    Response.Write("<script>alert('Vui lòng chọn ảnh!');</script>");
+                    return;
+                }
 
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conn.con;
-            cmd.CommandText = "INSERT INTO [dbo].[Products]      " +
-                "([Name]       " +
-                " ,[Description]         " +
-                " ,[Price]         " +
-                " ,[ImageUrl]           ," +
-                "[CategoryId])    " +
-                " VALUES           " +
-                "('"+tenSP+"', " +
-                "'"+chitiet+"'," +
-                ""+giaSP+"," +
-                "'img/products/ip15.jpg', " +
-                "3) ";
-            cmd.CommandType = CommandType.Text;
+                // Kiểm tra định dạng file
+                if (!CheckFileType(FileUpload2.FileName))
+                {
+                    Response.Write("<script>alert('Chỉ cho phép file .jpg, .jpeg, .png, .gif');</script>");
+                    return;
+                }
 
-            conn.con.Open(); // mo ket noi
-            cmd.ExecuteNonQuery(); // thực thi 
-            conn.con.Close(); // dong ket noi
+                string dir = Server.MapPath("~/img/products/");
+                if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
 
-            viewSP();
-            ScriptManager.RegisterStartupScript(this, GetType(), "HideAddModal", "$('#addModal').modal('hide'); $('.modal-backdrop').remove(); $('body').removeClass('modal-open');", true);
-            Response.Redirect("admin.aspx");
+                string fileName = DateTime.Now.Ticks + "_" + Path.GetFileName(FileUpload2.FileName);
+                string fullPath = Path.Combine(dir, fileName);
 
+                // Save file
+                FileUpload2.SaveAs(fullPath);
+                imagePath = "img/products/" + fileName;
+                imgadd.ImageUrl = imagePath;
+                txtaddimg.Text = imagePath;
+
+                // Lấy dữ liệu
+                string tenSP = txttenSPADD.Text.Trim();
+                string chitiet = txtchiTietADD.Text.Trim();
+                double giaSP = 0;
+                if (!Double.TryParse(txtgiaSPADD.Text.Trim(), out giaSP))
+                {
+                    Response.Write("<script>alert('Giá không hợp lệ');</script>");
+                    ScriptManager.RegisterStartupScript(
+                    this,
+                        GetType(),
+                        "ShowAddModal",
+                        "var addModal = new bootstrap.Modal(document.getElementById('addModal')); addModal.show();",
+                        true
+                );
+                    return;
+                }
+
+                // Insert bằng parameterized query
+                SqlCommand cmd = new SqlCommand(
+                    "INSERT INTO Products (Name, Description, Price, ImageUrl, CategoryId) " +
+                    "VALUES (@n, @d, @p, @i, @c)", conn.con);
+
+                cmd.Parameters.AddWithValue("@n", tenSP);
+                cmd.Parameters.AddWithValue("@d", chitiet);
+                cmd.Parameters.AddWithValue("@p", giaSP);
+                cmd.Parameters.AddWithValue("@i", imagePath);
+                cmd.Parameters.AddWithValue("@c", 3);
+
+                conn.con.Open();
+                cmd.ExecuteNonQuery();
+                conn.con.Close();
+
+                viewSP();
+
+                ScriptManager.RegisterStartupScript(
+                    this, GetType(),
+                    "HideAddModal",
+                    "var modal = bootstrap.Modal.getInstance(document.getElementById('addModal')); if (modal) modal.hide();",
+                    true
+                );
+
+                // Redirect nếu cần, hoặc chỉ update UI
+                Response.Redirect("qlsp.aspx");
+            }
+            catch (Exception ex)
+            {
+                // Hiển thị lỗi để debug
+                Response.Write("<script>alert('Lỗi khi thêm sản phẩm: " + Server.HtmlEncode(ex.Message) + "');</script>");
+            }
         }
+
+
 
         protected void log_out(object sender, EventArgs e)
         {
@@ -260,6 +342,15 @@ namespace webbansanphamapple
             Response.Redirect("login.aspx");
         }
 
-
+        protected void Show_addModal_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(
+                    this,
+                        GetType(),
+                        "ShowAddModal",
+                        "var addModal = new bootstrap.Modal(document.getElementById('addModal')); addModal.show();",
+                        true
+                );
+        }
     }
 }

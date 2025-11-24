@@ -44,6 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,12 +69,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin.aspx.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin.aspx.designer.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
     <Compile Include="connection.cs" />
     <Compile Include="default.aspx.cs">
@@ -105,6 +107,20 @@
       <DependentUpon>product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="qlsp.aspx.cs">
+      <DependentUpon>qlsp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qlsp.aspx.designer.cs">
+      <DependentUpon>qlsp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="qlus.aspx.cs">
+      <DependentUpon>qlus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qlus.aspx.designer.cs">
+      <DependentUpon>qlus.aspx</DependentUpon>
+    </Compile>
     <Compile Include="register.aspx.cs">
       <DependentUpon>register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -112,16 +128,8 @@
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin.aspx" />
     <Content Include="content\bootstrap-grid.css" />
     <Content Include="content\bootstrap-grid.min.css" />
     <Content Include="content\bootstrap-grid.rtl.css" />
@@ -156,7 +164,7 @@
     <Content Include="content\bootstrap-grid.css.map" />
     <Content Include="default.aspx" />
     <Content Include="Default.Master" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="Admin.Master" />
     <None Include="packages.config" />
     <Content Include="img\Carousel\carosel.jpg" />
     <Content Include="img\Carousel\carosel1.jpg" />
@@ -167,6 +175,8 @@
     <Content Include="img\products\macbook.jpg" />
     <Content Include="login.aspx" />
     <Content Include="product.aspx" />
+    <Content Include="qlsp.aspx" />
+    <Content Include="qlus.aspx" />
     <Content Include="register.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -191,6 +201,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="img\user\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

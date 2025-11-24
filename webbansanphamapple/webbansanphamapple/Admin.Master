@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="webbansanphamapple.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link href="~/content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.6.0.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <style>
+        body {
+            background-color: #f5f6fa;
+        }
+
+        .sidebar {
+            min-height: 100vh;
+            background-color: #343a40;
+        }
+
+            .sidebar a {
+                color: #fff;
+                padding: 12px 20px;
+                display: block;
+                text-decoration: none;
+            }
+
+                .sidebar a:hover {
+                    background-color: #495057;
+                }
+
+        .content {
+            padding: 20px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- FOOTER -->
+    <footer class="py-4 bg-dark text-light ">
+        <div class="navbar-nav mx-auto col-md-10">
+            <p class="mb-0">© Nguyễn Tiến Dũng</p>
+            <p class="mb-0">Chuyên đề ASP.NET</p>
+            <p class="mb-0">© Đại học Trà Vinh</p>
+        </div>
+    </footer>
+</body>
+</html>

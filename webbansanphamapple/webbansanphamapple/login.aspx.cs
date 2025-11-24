@@ -14,6 +14,7 @@ namespace webbansanphamapple
         connect conn = new connect();
         protected void Page_Load(object sender, EventArgs e)
         {
+
       
         }
 
@@ -32,7 +33,8 @@ namespace webbansanphamapple
                 Session["Role"] = tb.Rows[0][4].ToString(); // lưu section quyền.
                 Session["avatar"] = tb.Rows[0][6].ToString();
                 if (Session["Role"].ToString() == "Admin") {
-                    Response.Redirect("admin.aspx");
+                    Response.Redirect("qlus.aspx");
+
                 }
                 else
                     //Response.Write("<script>console.log('" + tb.Rows[0][4].ToString() + "')</script>");

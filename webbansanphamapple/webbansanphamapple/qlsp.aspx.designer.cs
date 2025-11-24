@@ -11,7 +11,7 @@ namespace webbansanphamapple
 {
 
 
-    public partial class admin
+    public partial class qlsp
     {
 
         /// <summary>
@@ -40,6 +40,15 @@ namespace webbansanphamapple
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel up1;
+
+        /// <summary>
+        /// btnAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAdd;
 
         /// <summary>
         /// Repeater1 control.
@@ -177,22 +186,22 @@ namespace webbansanphamapple
         protected global::System.Web.UI.WebControls.TextBox txtgiaSPADD;
 
         /// <summary>
-        /// Image1 control.
+        /// imgadd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Image imgadd;
 
         /// <summary>
-        /// TextBox4 control.
+        /// txtaddimg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtaddimg;
 
         /// <summary>
         /// FileUpload2 control.
@@ -204,12 +213,12 @@ namespace webbansanphamapple
         protected global::System.Web.UI.WebControls.FileUpload FileUpload2;
 
         /// <summary>
-        /// Button1 control.
+        /// btnThem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnThem;
     }
 }
