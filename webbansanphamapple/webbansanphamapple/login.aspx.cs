@@ -32,7 +32,7 @@ namespace webbansanphamapple
                 // Session["allow"] = true; // tạo session có tên là allow lưu trạng tháng true
                 Session["Role"] = tb.Rows[0][4].ToString(); // lưu section quyền.
                 Session["avatar"] = tb.Rows[0][6].ToString();
-                if (Session["Role"].ToString() == "Admin") {
+                if (Session["Role"].ToString() == "admin") {
                     Response.Redirect("qlus.aspx");
 
                 }

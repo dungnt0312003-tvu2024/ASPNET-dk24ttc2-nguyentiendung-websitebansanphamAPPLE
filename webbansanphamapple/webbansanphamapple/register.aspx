@@ -30,27 +30,29 @@
         </ul>
     </nav>
     <!-- register form-->
-
-    <form id="form1" runat="server">
-        <asp:Label ID="lbkq" runat="server"></asp:Label>
-        <br />
-        Nhập Username<asp:TextBox ID="txtUser" runat="server" CssClass="form-control" required="required"></asp:TextBox>
-        <br />
-        Nhập Password
+    <section class="m-5 border-bottom p-5">
+        <div class="container p5">
+            <form id="form1" runat="server">
+                <asp:Label ID="lbkq" runat="server"></asp:Label>
+                <br />
+                Nhập Username<asp:TextBox ID="txtUser" runat="server" CssClass="form-control" required="required"></asp:TextBox>
+                <br />
+                Nhập Password
      <asp:TextBox ID="txtPass1" runat="server" TextMode="Password" CssClass="form-control" required="required"></asp:TextBox>
-        <br />
-        Nhập lại Password
+                <br />
+                Nhập lại Password
      <asp:TextBox ID="txtPass2" runat="server" TextMode="Password" CssClass="form-control" required="required"></asp:TextBox>
-        <br />
-        Nhập Fullname
+                <br />
+                Nhập Fullname
      <asp:TextBox ID="txtFullname" runat="server" CssClass="form-control"></asp:TextBox>
-        <br />
-        Nhập Address
+                <br />
+                Nhập Address
      <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control"></asp:TextBox>
-        <br />
-        <asp:Button ID="btSignup" runat="server" Text="Đăng ký" OnClick="btSignup_Click" />
-    </form>
-
+                <br />
+                <asp:Button ID="btSignup" runat="server" Text="Đăng ký" class="btn btn-primary" OnClick="btSignup_Click" />
+            </form>
+        </div>
+    </section>
 
 </asp:Content>
 

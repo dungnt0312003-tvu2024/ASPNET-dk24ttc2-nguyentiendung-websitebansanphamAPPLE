@@ -17,7 +17,7 @@ namespace webbansanphamapple
         protected void Page_Load(object sender, EventArgs e) { 
             this.Page.Form.Enctype = "multipart/form-data";
 
-            if (Session["Role"] == null || Session["Role"].ToString() != "Admin")
+            if (Session["Role"] == null || Session["Role"].ToString() != "admin")
             {
                 Response.Redirect("login.aspx");
 
