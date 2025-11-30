@@ -13,7 +13,10 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <ul class="navbar-nav mx-auto col-md-8 ">
             <li class="nav-item">
-                <a class="nav-link" href="default.aspx">Trang chủ</a>
+                <a class="nav-link" href="default.aspx">
+                    <i class="bi bi-apple"></i>
+                    Trang chủ
+                </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="product.aspx">Sản phẩm</a>

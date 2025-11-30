@@ -7,7 +7,7 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <ul class="navbar-nav mx-auto col-md-8 ">
             <li class="nav-item">
-                <a class="nav-link" href="default.aspx">Trang chủ</a>
+                <a class="nav-link" href="default.aspx"><i class="bi bi-apple"></i>Trang chủ</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="product.aspx">Sản phẩm</a>
@@ -29,25 +29,38 @@
             </li>
         </ul>
     </nav>
+    <section class="py-5 text-center bg-white border-bottom m-5">
+    <div class="container">
+        <h1 class="display-5 fw-bold">Cửa hàng Apple</h1>
+        <p class="lead">Khám phá các sản phẩm Apple mới nhất với giá tốt nhất.</p>
+         <a href="product.aspx" class="btn btn-primary btn-lg px-4">Xem sản phẩm</a>
+    </div>
+</section>
     <!-- register form-->
     <section class="m-5 border-bottom p-5">
         <div class="container p5">
             <form id="form1" runat="server">
                 <asp:Label ID="lbkq" runat="server"></asp:Label>
                 <br />
-                Nhập Username<asp:TextBox ID="txtUser" runat="server" CssClass="form-control" required="required"></asp:TextBox>
+                Nhập Tên người dùng<asp:TextBox ID="txtUser" runat="server" CssClass="form-control" required="required"></asp:TextBox>
                 <br />
                 Nhập Password
-     <asp:TextBox ID="txtPass1" runat="server" TextMode="Password" CssClass="form-control" required="required"></asp:TextBox>
+                 <asp:TextBox ID="txtPass1" runat="server" TextMode="Password" CssClass="form-control" required="required"></asp:TextBox>
                 <br />
                 Nhập lại Password
-     <asp:TextBox ID="txtPass2" runat="server" TextMode="Password" CssClass="form-control" required="required"></asp:TextBox>
+                 <asp:TextBox ID="txtPass2" runat="server" TextMode="Password" CssClass="form-control" required="required"></asp:TextBox>
                 <br />
-                Nhập Fullname
-     <asp:TextBox ID="txtFullname" runat="server" CssClass="form-control"></asp:TextBox>
+                Nhập Họ và Tên
+                 <asp:TextBox ID="txtFullname" runat="server" CssClass="form-control"></asp:TextBox>
                 <br />
-                Nhập Address
-     <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control"></asp:TextBox>
+                Nhập Địa chỉ
+                 <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control"></asp:TextBox>
+                <br />
+                Nhập Địa chỉ Email
+                <asp:TextBox ID="txtemail" runat="server" CssClass="form-control"></asp:TextBox>
+                <br />
+                Nhập Số điện thoại
+                 <asp:TextBox ID="txtphone" runat="server" CssClass="form-control"></asp:TextBox>
                 <br />
                 <asp:Button ID="btSignup" runat="server" Text="Đăng ký" class="btn btn-primary" OnClick="btSignup_Click" />
             </form>

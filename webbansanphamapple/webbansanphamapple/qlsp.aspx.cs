@@ -30,6 +30,7 @@ namespace webbansanphamapple
             {
                 
                 lblXinchao.Text = "Xin chào : " + Session["Username"].ToString() + "" ;
+                uimg.ImageUrl = Session["avatar"].ToString();
 
                 viewSP();
 
@@ -51,6 +52,19 @@ namespace webbansanphamapple
             Repeater1.DataBind();
         }
 
+        protected void btnSearch_Click(object sender, EventArgs e) //Hàm tìm kiếm sản phẩm khi click nút tìm kiếm
+        {
+            string keyword = txtSearch.Text.Trim();
+
+            string query = "SELECT * FROM Products WHERE Name LIKE @kw OR Description LIKE @kw";
+            SqlCommand cmd = new SqlCommand(query, conn.con);
+            cmd.Parameters.AddWithValue("@kw", "%" + keyword + "%");
+            conn.con.Open();
+            Repeater1.DataSource = cmd.ExecuteReader();
+            Repeater1.DataBind();
+            conn.con.Close();
+        }
+
         //Nút Lưu trong modal Sửa
         protected void btnSave_Click(object sender, EventArgs e)
         {
@@ -58,6 +72,7 @@ namespace webbansanphamapple
 
             try
             {
+                
                 // Nếu có chọn file mới thì upload
                 if (FileUpload1.HasFile)
                 {
@@ -69,6 +84,11 @@ namespace webbansanphamapple
                     FileUpload1.SaveAs(fullPath);
                     imagePath = "img/products/" + fileName;
                     img.ImageUrl = imagePath;
+                }
+                if (!CheckFileType(FileUpload1.FileName))
+                {
+                    Response.Write("<script>alert('Chỉ cho phép file .jpg, .jpeg, .png, .gif');</script>");
+                    return;
                 }
 
                 SqlCommand cmd = new SqlCommand(
@@ -102,6 +122,8 @@ namespace webbansanphamapple
             }
         }
 
+        
+
         //Nút Xác nhận xóa trong modal Xóa
         protected void btnConfirmDelete_Click(object sender, EventArgs e)
         {
@@ -116,7 +138,7 @@ namespace webbansanphamapple
 
             ScriptManager.RegisterStartupScript(this, GetType(), "HideDelete", "$('#deleteModal').modal('hide'); $('.modal-backdrop').remove(); $('body').removeClass('modal-open');",  true);
 
-            Response.Redirect("admin.aspx");
+            Response.Redirect("qlsp.aspx");
         }
 
         // Xử lý các lệnh từ Repeater
@@ -175,8 +197,6 @@ namespace webbansanphamapple
                         true
              );
 
-
-
         }
 
         // Kiểm tra định dạng file ảnh
@@ -199,57 +219,6 @@ namespace webbansanphamapple
             }
         }
 
-        //Nút Thêm trong modal Thêm
-        //protected void btnThem_Click(object sender, EventArgs e)
-        //{
-        //    String imagePath;
-        //    // Nếu có chọn file mới thì upload
-        //    if (FileUpload2.HasFile)
-        //    {
-        //        string dir = Server.MapPath("~/img/products/");
-        //        if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
-
-        //        string fileName = DateTime.Now.Ticks + "_" + FileUpload1.FileName;
-        //        string fullPath = Path.Combine(dir, fileName);
-        //        FileUpload2.SaveAs(fullPath);
-        //        imagePath = "img/products/" + fileName;
-        //        imgadd.ImageUrl = imagePath;
-        //        txtaddimg.Text = imagePath;
-        //        string tenSP = txttenSPADD.Text;
-        //        string chitiet = txtchiTietADD.Text;
-        //        string gia = txtgiaSPADD.Text;
-
-        //        Double giaSP = Convert.ToDouble(gia);
-
-
-        //        SqlCommand cmd = new SqlCommand();
-        //        cmd.Connection = conn.con;
-        //        cmd.CommandText = "INSERT INTO [dbo].[Products]      " +
-        //            "([Name]       " +
-        //            " ,[Description]         " +
-        //            " ,[Price]         " +
-        //            " ,[ImageUrl]           ," +
-        //            "[CategoryId])    " +
-        //            " VALUES           " +
-        //            "('" + tenSP + "', " +
-        //            "'" + chitiet + "'," +
-        //            "" + giaSP + "," +
-        //            "'" + imagePath + "', " +
-        //            "3) ";
-        //         Response.Write("<script>console.log("+ cmd.CommandText.ToString() + ")</script>");
-        //        cmd.CommandType = CommandType.Text;
-
-        //        conn.con.Open(); // mo ket noi
-        //        cmd.ExecuteNonQuery(); // thực thi 
-        //        conn.con.Close(); // dong ket noi
-
-        //        viewSP();
-        //        ScriptManager.RegisterStartupScript(this, GetType(), "HideAddModal", "$('#addModal').modal('hide'); $('.modal-backdrop').remove(); $('body').removeClass('modal-open');", true);
-        //        Response.Redirect("qlsp.aspx");
-        //    }
-
-
-        //}
         protected void btnThem_Click(object sender, EventArgs e)
         {
   

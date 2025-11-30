@@ -11,7 +11,7 @@ namespace webbansanphamapple
 {
     public partial class register : System.Web.UI.Page
     {
-        connect kn = new connect();
+        connect conn = new connect();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["allow"] != null)
@@ -28,19 +28,22 @@ namespace webbansanphamapple
             string password2 = txtPass2.Text;
             string fullname = HttpUtility.HtmlDecode(txtFullname.Text);
             string address = txtAddress.Text;
+            string email = txtemail.Text;
+            String phone = txtphone.Text;
+            int phoneNum = int.Parse(phone);
+
             if (password1 == password2)
             {
-
-                password1 = kn.Mahoa(password1);
-
+                password1 = conn.Mahoa(password1);
                 SqlCommand cmd = new SqlCommand();
-                cmd.Connection = kn.con;
-                cmd.CommandText = "insert into tbluser(Username,Password,Fullname,Address,Status,Role) values('" + username + "','" + password1 + "','" + fullname + "','" + address + "',0,0)";
+                cmd.Connection = conn.con;
+                cmd.CommandText = "insert into Users(Username,Email,PasswordHash,Role,Image,Name,PhoneNB,Address) " +
+                "values('" + username + "','" + email + "','" + password1 + "','user','img/user/user.png','" + fullname + "'," + phoneNum + ",'" + address + "')";
                 cmd.CommandType = CommandType.Text;
-
-                kn.con.Open(); // mo ket noi
+                Response.Write(cmd.CommandText);
+                conn.con.Open(); // mo ket noi
                 cmd.ExecuteNonQuery(); // thực thi 
-                kn.con.Close(); // dong ket noi
+                conn.con.Close(); // dong ket noi
                 Response.Redirect("Login.aspx");
             }
             else

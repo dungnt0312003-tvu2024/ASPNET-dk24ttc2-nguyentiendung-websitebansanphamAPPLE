@@ -4,10 +4,12 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <link rel="icon" href="img/user/apple.png" type="image/x-icon"/>
+    <title>Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link href="~/content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
     <script src="Scripts/jquery-3.6.0.min.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <style>
@@ -42,12 +44,50 @@
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
     <!-- FOOTER -->
-    <footer class="py-4 bg-dark text-light ">
-        <div class="navbar-nav mx-auto col-md-10">
-            <p class="mb-0">© Nguyễn Tiến Dũng</p>
-            <p class="mb-0">Chuyên đề ASP.NET</p>
-            <p class="mb-0">© Đại học Trà Vinh</p>
+    <footer class="bg-dark text-light pt-4 pb-4 mt-5">
+    <div class="container">
+        <div class="row text-center text-md-start align-items-center">
+
+            <!-- Logo + tên -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h5 class="fw-bold">Nguyễn Tiến Dũng</h5>
+                <p class="mb-0">Chuyên đề ASP.NET</p>
+                <p class="mb-0">Đại học Trà Vinh</p>
+            </div>
+
+            <!-- Đường kẻ ngăn cách khi mobile -->
+            <div class="d-md-none mb-3">
+                <hr class="border-secondary">
+            </div>
+
+            <!-- Menu footer -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h6 class="fw-bold mb-2">Liên kết nhanh</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">Trang chủ</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Sản phẩm</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="col-md-4 text-center text-md-end">
+                <h6 class="fw-bold mb-2">Kết nối với tôi</h6>
+                <a href="#" class="text-light fs-4 me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light fs-4 me-3"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/dungnt0312003-tvu2024/ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE" class="text-light fs-4"><i class="bi bi-github"></i></a>
+            </div>
+
         </div>
-    </footer>
+
+        <hr class="border-secondary mt-4" />
+
+        <p class="text-center mb-0 opacity-75">© 2025 - Nguyễn Tiến Dũng | Xây dựng websites bán sản phẩm công nghệ Apple</p>
+        <p class="text-center mb-0 opacity-75">
+            <i clas="bi bi-github"></i>
+            <a class="text-center mb-0" href="https://github.com/dungnt0312003-tvu2024/ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE">https://github.com/dungnt0312003-tvu2024/ASPNET-dk24ttc2-nguyentiendung-websitebansanphamAPPLE</a>
+        </p>
+    </div>
+</footer>
 </body>
 </html>

@@ -11,7 +11,35 @@ namespace webbansanphamapple
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Username"] != null)
+            {
+                ScriptManager.RegisterStartupScript(
+                        this,
+                            GetType(),
+                            "hideLogin",
+                            "const login = document.getElementById('login'); login.remove();",
+                            true
+                    );
+                lblHello.Text = "Xin chào : " + Session["Username"].ToString() + "";
+                uimg.ImageUrl = Session["avatar"].ToString();
+            }
+            else if (Session["Username"] == null)
+            {
+                ScriptManager.RegisterStartupScript(
+                        this,
+                            GetType(),
+                            "hideinf",
+                            "const inf = document.getElementById('inf'); inf.remove();",
+                            true
+                    );
+            }
+            
+            
+    }
+        protected void log_out(object sender, EventArgs e)
+        {
+            Session["Username"] = null;
+            Response.Redirect("login.aspx");
         }
     }
 }

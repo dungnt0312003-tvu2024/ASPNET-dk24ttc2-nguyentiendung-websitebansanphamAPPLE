@@ -1,16 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="qlsp.aspx.cs" Inherits="webbansanphamapple.qlsp" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <style type="text/css">
-    #form1 {
-        width: 458px;
-    }
+    <style type="text/css">
+        #form1 {
+            width: 458px;
+        }
 
-    .sp {
-        width: 200px;
-        height: 200px;
-    }
-</style>
+        .sp {
+            width: 200px;
+            height: 200px;
+        }
+
+        .uimg {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form runat="server">
@@ -18,7 +23,10 @@
             <!-- Sidebar -->
             <div class="sidebar">
                 <h4 class="text-white text-center py-3">ADMIN</h4>
-                <a href="default.aspx">Trang chủ</a>
+                <div class="container">
+                    <asp:Image runat="server" ID="uimg" class="uimg rounded-circle" />
+                </div>
+                <a href="default.aspx"><i class="bi bi-apple"></i>Trang chủ</a>
                 <a href="qlus.aspx">Quản lí người dùng</a>
                 <a href="qlsp.aspx" class="text-success">Quản lí sản phẩm</a>
                 <asp:Label runat="server" ID="lblXinchao" class="text-light"></asp:Label>
@@ -30,18 +38,34 @@
             <div class="content flex-grow-1">
                 <!-- Bảng danh sách sản phẩm -->
                 <div class="container p-3">
-
                     <asp:ScriptManager ID="ScriptManager1" runat="server" />
                     <asp:UpdatePanel ID="up1" runat="server" UpdateMode="Conditional">
                         <ContentTemplate>
                             <h2>Danh sách Sản phẩm
                             </h2>
-                            <input class="form-control" id="myInput" type="text" placeholder="Search.." />
-                            <asp:Button id="btnAdd" runat="server" Text="Thêm sản phẩm" CssClass="btn btn-primary" OnClick="Show_addModal_Click" />
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-10">
+                                        <asp:TextBox ID="txtSearch" runat="server" Class="form-control" Placeholder="Tìm kiếm sản phẩm.." />
+                                        
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <asp:Button ID="btnSearch" runat="server" Text="Tìm sản phẩm" CssClass="btn btn-primary" OnClick="btnSearch_Click" />
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                   <div class="col-sm-2">
+                                        <asp:Button ID="btnAdd" runat="server" Text="Thêm sản phẩm" CssClass="btn btn-primary" OnClick="Show_addModal_Click" />
+                                   </div>
+                                </div>
+                            </div>
+
+                            
                             <br />
                             <!-- Repeater hiển thị sản phẩm -->
                             <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
-                                
+
                                 <HeaderTemplate>
                                     <table class="table table-bordered table-striped">
                                         <thead>
@@ -145,8 +169,8 @@
                                             <!--Lưu ID sản phẩm để đổ vào sửa và xóa-->
                                             Tên sản phẩm:
                                                    <asp:TextBox ID="txttenSPADD" runat="server" CssClass="form-control"></asp:TextBox>
-                                                    <br />
-                                                    Chi tiết:
+                                            <br />
+                                            Chi tiết:
                                                    <asp:TextBox ID="txtchiTietADD" runat="server" CssClass="form-control"></asp:TextBox>
                                             <br />
                                             Giá:
@@ -170,6 +194,7 @@
                         <Triggers>
                             <asp:PostBackTrigger ControlID="btnSave" />
                             <asp:PostBackTrigger ControlID="btnThem" />
+                            <asp:PostBackTrigger ControlID="btnSearch" />
                         </Triggers>
                     </asp:UpdatePanel>
 

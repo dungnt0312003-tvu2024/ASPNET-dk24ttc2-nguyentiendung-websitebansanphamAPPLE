@@ -22,7 +22,7 @@ namespace webbansanphamapple
         protected void btLogin_Click(object sender, EventArgs e)
         {
             string passmahoa = conn.Mahoa (txtPassword.Text);
-            SqlDataAdapter da = new SqlDataAdapter("select * from Users where Username='" + txtUsername.Text + "' and PasswordHash ='" + txtPassword.Text + "' ", conn.con);
+            SqlDataAdapter da = new SqlDataAdapter("select * from Users where Username='" + txtUsername.Text + "' and PasswordHash ='" + passmahoa + "' ", conn.con);
             DataTable tb = new DataTable();
             da.Fill(tb);
             if (tb.Rows.Count > 0) // nếu có us/pass trung khớp trong csdl thì 
@@ -31,13 +31,13 @@ namespace webbansanphamapple
                 Session["Username"] = txtUsername.Text; // tạo biến session có tên là name, luu username
                 // Session["allow"] = true; // tạo session có tên là allow lưu trạng tháng true
                 Session["Role"] = tb.Rows[0][4].ToString(); // lưu section quyền.
-                Session["avatar"] = tb.Rows[0][6].ToString();
+                Session["avatar"] = tb.Rows[0][6].ToString(); // lưu section avatar.
+                Session["IdUser"] = tb.Rows[0][0].ToString(); // lưu section id người dùng.
                 if (Session["Role"].ToString() == "admin") {
                     Response.Redirect("qlus.aspx");
-
                 }
                 else
-                    //Response.Write("<script>console.log('" + tb.Rows[0][4].ToString() + "')</script>");
+                    
                     Response.Redirect("default.aspx"); // trả về trang Default
 
             }

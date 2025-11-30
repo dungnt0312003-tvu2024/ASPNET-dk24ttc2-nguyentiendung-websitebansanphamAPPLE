@@ -1,18 +1,24 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="product.aspx.cs" MasterPageFile="~/Default.Master" Inherits="webbansanphamapple.product" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <style type="text/css">
-    #form1 {
-        width: 458px;
-    }
+    <style type="text/css">
+        #form1 {
+            width: 458px;
+        }
 
-</style>
+            .uimg{
+                width: 50px;
+                height: 50px;
+            }
+
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <form runat="server">
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <ul class="navbar-nav mx-auto col-md-8 ">
             <li class="nav-item">
-                <a class="nav-link" href="default.aspx">Trang chủ</a>
+                <a class="nav-link" href="default.aspx"><i class="bi bi-apple"></i>Trang chủ</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link  active" href="product.aspx">Sản phẩm</a>
@@ -21,8 +27,20 @@
                 <a class="nav-link" href="#">Liên hệ</a>
             </li>
         </ul>
+        <!-- Đăng xuất -->
+        <ul class="navbar-nav ms-auto col-md-2" id="inf">
+            <li class="nav-item p-2">
+                <asp:Label ID="lblHello" class="text-light" Text="Xin chào :" runat="server" />
+                <asp:Image runat="server" class="uimg rounded-circle" id="uimg"/>
+            </li>
+            <li class="nav-item p-2">
+                <asp:Button runat="server" class="btn btn-primary mb-3" Text="Đăng xuất" OnClick="log_out" />
+            </li>
+
+        </ul>
+
         <!-- Đăng nhập / Đăng ký -->
-        <ul class="navbar-nav ms-auto col-md-2">
+        <ul class="navbar-nav ms-auto col-md-2" id="login">
             <li class="nav-item">
                 <a class="nav-link" href="login.aspx">Đăng nhập</a>
             </li>
@@ -38,10 +56,8 @@
         <div class="container">
             <h1 class="display-5 fw-bold">Cửa hàng Apple</h1>
             <p class="lead">Khám phá các sản phẩm Apple mới nhất với giá tốt nhất.</p>
-            <a href="product.aspx" class="btn btn-primary btn-lg px-4">Xem sản phẩm</a>
         </div>
     </section>
-    <form runat="server">
        <div class="container ">
            <div class="row">
                <div class="col-xl-10">
@@ -60,7 +76,6 @@
                             <!-- iPhone 16 Pro -->
                             <div class="col-md-4">
                                 <div class="card h-100 shadow-sm">
-                                    <!-- <img src="img/products/ip15.jpg" class="card-img-top" alt="iPhone 16 Pro" />-->
                                     <div class="container">
                                         <asp:Image  class="card-img-top sp" ImageUrl='<%#  Eval("ImageUrl") %>' runat="server" />
                                     </div>
@@ -84,7 +99,7 @@
             </div>
         </section>        
 
-    </form>
+   
 
 <!-- modal sản phẩm -->
     <div class="modal fade" id="productModal" tabindex="-1">
@@ -144,6 +159,7 @@
             });
 
     </script>
+   </form>
 </asp:Content>
 
 
