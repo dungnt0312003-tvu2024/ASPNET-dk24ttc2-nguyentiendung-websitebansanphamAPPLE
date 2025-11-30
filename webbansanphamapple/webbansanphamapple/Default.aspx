@@ -28,16 +28,21 @@
                     <a class="nav-link" href="#">Liên hệ</a>
                 </li>
             </ul>
-            <ul class="navbar-nav ms-auto col-md-2" id="inf">
-                <li class="nav-item p-2">
+            <div class="dropdown navbar-nav ms-auto col-md-2" id="inf">
+                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">    
                     <asp:Label ID="lblHello" class="text-light" Text="Xin chào :" runat="server" />
-                    <asp:Image runat="server" id="uimg" class="uimg rounded-circle"/>
-                </li>
-                <li class="nav-item p-2">
-                    <asp:Button runat="server" class="btn btn-primary mb-3" Text="Đăng xuất" OnClick="log_out" />
-                </li>
-
-            </ul>
+                    <asp:Image runat="server" class="uimg rounded-circle" ID="uimg" />    
+                   <i class="bi bi-arrow-down-square text-bg-light"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li >
+                        <asp:Button runat="server" class="btn  mb-3" Text="Đăng xuất" OnClick="log_out" />
+                    </li>
+                    <li>
+                        <asp:Button runat="server" class="btn  mb-3" Text="Thay đổi thông tin" OnClick="user_change_Click" />
+                    </li>
+                </ul>
+            </div>
             <!-- Đăng nhập / Đăng ký -->
             <ul class="navbar-nav ms-auto col-md-2" id="login">
                 <li class="nav-item">

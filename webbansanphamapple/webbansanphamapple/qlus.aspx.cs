@@ -25,13 +25,6 @@ namespace webbansanphamapple
             }
             else if(!IsPostBack)
             {
-                ScriptManager.RegisterStartupScript(
-                    this,
-                        GetType(),
-                        "hideLogin",
-                        "const login = document.getElementById('info'); login.remove();",
-                        true
-                );
                  lblXinchao.Text = "Xin chào : " + Session["Username"].ToString() +  "" ;
                  uimg.ImageUrl = Session["avatar"].ToString();
 

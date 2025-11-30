@@ -109,13 +109,13 @@
                                             <asp:HiddenField ID="hfProductId" runat="server" />
                                             <!--Lưu ID sản phẩm để đổ vào sửa và xóa-->
                                             Tên người dùng:
-                                       <asp:TextBox ID="txtEditUName" runat="server" CssClass="form-control"></asp:TextBox>
+                                       <asp:TextBox ID="txtEditUName" runat="server" CssClass="form-control" ></asp:TextBox>
                                             <br />
                                             Mật khẩu :
-                                            <asp:TextBox ID="txtEditPass" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtEditPass" runat="server" CssClass="form-control" ></asp:TextBox>
                                             <br />
                                             Email:
-                                       <asp:TextBox ID="txtEditEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                       <asp:TextBox ID="txtEditEmail" runat="server" CssClass="form-control" ></asp:TextBox>
                                             <br />
                                             Quyền:
                                         <asp:DropDownList ID="ddlRole" runat="server" CssClass="form-control">
@@ -124,13 +124,13 @@
                                         </asp:DropDownList>
                                             <br />
                                             Họ và tên:
-                                        <asp:TextBox ID="txtEditName" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtEditName" runat="server" CssClass="form-control" ></asp:TextBox>
                                             <br />
                                             Số điện thoại:
-                                        <asp:TextBox ID="txtEditPhone" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtEditPhone" runat="server" CssClass="form-control" ></asp:TextBox>
                                             <br />
                                             Địa chỉ :
-                                        <asp:TextBox ID="txtEditAdd" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtEditAdd" runat="server" CssClass="form-control" ></asp:TextBox>
                                             <br />
                                             Ảnh:
                                        <asp:Image ID="img" class="card-img-top rounded sp" runat="server" />

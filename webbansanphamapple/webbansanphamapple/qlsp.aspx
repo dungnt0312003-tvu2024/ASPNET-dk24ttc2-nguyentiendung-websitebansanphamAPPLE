@@ -118,13 +118,13 @@
                                             <asp:HiddenField ID="hfProductId" runat="server" />
                                             <!--Lưu ID sản phẩm để đổ vào sửa và xóa-->
                                             Tên sản phẩm:
-                                                   <asp:TextBox ID="txtEditName" runat="server" CssClass="form-control"></asp:TextBox>
+                                                   <asp:TextBox ID="txtEditName" runat="server" CssClass="form-control" ></asp:TextBox>
                                             <br />
                                             Chi tiết:
                                                    <asp:TextBox ID="txtEditDesc" runat="server" CssClass="form-control"></asp:TextBox>
                                             <br />
                                             Giá:
-                                                   <asp:TextBox ID="txtEditPrice" runat="server" CssClass="form-control"></asp:TextBox>
+                                                   <asp:TextBox ID="txtEditPrice" runat="server" CssClass="form-control" ></asp:TextBox>
                                             <br />
                                             Ảnh:
                                                    <asp:Image ID="img" class="card-img-top rounded sp" runat="server" />
@@ -168,13 +168,13 @@
                                             <asp:HiddenField ID="HiddenField1" runat="server" />
                                             <!--Lưu ID sản phẩm để đổ vào sửa và xóa-->
                                             Tên sản phẩm:
-                                                   <asp:TextBox ID="txttenSPADD" runat="server" CssClass="form-control"></asp:TextBox>
+                                                   <asp:TextBox ID="txttenSPADD" runat="server" CssClass="form-control" ></asp:TextBox>
                                             <br />
                                             Chi tiết:
-                                                   <asp:TextBox ID="txtchiTietADD" runat="server" CssClass="form-control"></asp:TextBox>
+                                                   <asp:TextBox ID="txtchiTietADD" runat="server" CssClass="form-control" ></asp:TextBox>
                                             <br />
                                             Giá:
-                                                   <asp:TextBox ID="txtgiaSPADD" runat="server" CssClass="form-control"></asp:TextBox>
+                                                   <asp:TextBox ID="txtgiaSPADD" runat="server" CssClass="form-control" ></asp:TextBox>
                                             <br />
                                             Ảnh:
                                                    <asp:Image ID="imgadd" class="card-img-top rounded sp" runat="server" />

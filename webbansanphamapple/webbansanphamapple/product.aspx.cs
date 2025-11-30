@@ -48,6 +48,7 @@ namespace webbansanphamapple
                 
         }
 
+
         public void DS()
         {
             SqlDataAdapter da = new SqlDataAdapter("select * from Products", conn.con);
@@ -101,6 +102,11 @@ namespace webbansanphamapple
         {
             Session["Username"] = null;
             Response.Redirect("login.aspx");
+        }
+
+        protected void user_change_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("user_Change.aspx");
         }
 
     }

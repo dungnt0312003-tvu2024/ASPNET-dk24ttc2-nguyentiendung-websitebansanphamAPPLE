@@ -8,15 +8,16 @@
     <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8" />
     <link href="~/content/bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <script src="Scripts/jquery-3.6.0.min.js"></script>
     <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
     <title>Apple Product Store</title>
 </head>
 <body>
 
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
     </asp:ContentPlaceHolder>
 
     <!-- FOOTER -->

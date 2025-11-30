@@ -36,6 +36,10 @@ namespace webbansanphamapple
             
             
     }
+        protected void user_change_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("user_Change.aspx");
+        }
         protected void log_out(object sender, EventArgs e)
         {
             Session["Username"] = null;

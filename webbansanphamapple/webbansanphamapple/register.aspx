@@ -51,16 +51,16 @@
                  <asp:TextBox ID="txtPass2" runat="server" TextMode="Password" CssClass="form-control" required="required"></asp:TextBox>
                 <br />
                 Nhập Họ và Tên
-                 <asp:TextBox ID="txtFullname" runat="server" CssClass="form-control"></asp:TextBox>
+                 <asp:TextBox ID="txtFullname" runat="server" CssClass="form-control" required="required"></asp:TextBox>
                 <br />
                 Nhập Địa chỉ
-                 <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control"></asp:TextBox>
+                 <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" required="required"></asp:TextBox>
                 <br />
                 Nhập Địa chỉ Email
-                <asp:TextBox ID="txtemail" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtemail" runat="server" CssClass="form-control" required="required"></asp:TextBox>
                 <br />
                 Nhập Số điện thoại
-                 <asp:TextBox ID="txtphone" runat="server" CssClass="form-control"></asp:TextBox>
+                 <asp:TextBox ID="txtphone" runat="server" CssClass="form-control" required="required"></asp:TextBox>
                 <br />
                 <asp:Button ID="btSignup" runat="server" Text="Đăng ký" class="btn btn-primary" OnClick="btSignup_Click" />
             </form>
