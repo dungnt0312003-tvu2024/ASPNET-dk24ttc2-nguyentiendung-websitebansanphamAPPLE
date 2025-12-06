@@ -13,5 +13,21 @@
 
 ### Hướng dẫn cài đặt chương trình
 
+- Yêu cầu hệ thống :
+  * .NET 5.0 SDK 
+  * Microsoft SQL Server 2012 trở lên
+  * Visual Studio Code 2022 trở lên
+  * SQL Server Management Studio (SSMS)
+ 
+  
+- Cài đặt database
+  * Restore file Database backup `AppleStoreDB.bak` trong thư mục `thesis/SQL` .
+
+- Tài khoản demo
+|Quyền| Tên người dùng| Mật khẩu |
+|---| --- | --- |
+|admin| admin | 123123 |
+|user| user | 123456 |
+
 
 17-10-2025 : tạo sườn làm viêc, nghiên cứu, học về asp.dot chuẩn bị cho dự án
