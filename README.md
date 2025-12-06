@@ -24,7 +24,8 @@
   * Restore file Database backup `AppleStoreDB.bak` trong thư mục `thesis/SQL` .
 
 - Tài khoản demo
-|Quyền| Tên người dùng| Mật khẩu |
+  
+| Quyền | Tên người dùng| Mật khẩu |
 |---| --- | --- |
 |admin| admin | 123123 |
 |user| user | 123456 |
