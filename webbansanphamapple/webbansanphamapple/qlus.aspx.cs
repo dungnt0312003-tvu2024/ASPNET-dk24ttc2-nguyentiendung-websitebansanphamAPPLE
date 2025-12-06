@@ -101,20 +101,8 @@ namespace webbansanphamapple
                 cmd.ExecuteNonQuery();
                 conn.con.Close();
                 viewUS();
-                ScriptManager.RegisterStartupScript(
-                    this,
-                    GetType(),
-                    "debug",
-                    "alert('Role: " + cmd + "');",
-                    true
-                );
-                ScriptManager.RegisterStartupScript(
-                    this,
-                    GetType(),
-                    "CloseModal",
-                    "$('#editModal').modal('hide');",
-                    true
-                );
+                ScriptManager.RegisterStartupScript(this, GetType(), "HideEdit",
+                         "var hideeditModal = new bootstrap.Modal(document.getElementById('editModal')); hideeditModal.hide();", true);
             }
             catch (Exception ex)
             {
